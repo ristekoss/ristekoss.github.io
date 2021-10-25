@@ -1,16 +1,16 @@
 import React, { useRef } from "react"
 import Image from "gatsby-image/withIEPolyfill"
 import useFixedPartnerLogos from "../../utils/queries/useFixedPartnerLogos"
+import Partners from "../../utils/data/Partners.json"
 import Ticker from "react-ticker"
 import styled from "@emotion/styled"
 
-const PartnerLogo = ({ partner }) => {
+const PartnerLogo = ({ partner, urls }) => {
   const { images } = useFixedPartnerLogos()
   console.log(images)
   const logoFile = images.edges.find(
-    img => img.node.name === partner.toLowerCase()
+    (img) => img.node.name === partner.toLowerCase()
   )
-
   const source = logoFile.node.childImageSharp.fixed
 
   const LogoContainer = styled("div")`
@@ -21,13 +21,15 @@ const PartnerLogo = ({ partner }) => {
 
   return (
     <LogoContainer className={`w-full mx-3 mt-2 mb-3`}>
-      <Image
-        className={`ticker`}
-        fixed={source}
-        objectFit="contain"
-        objectPosition="center"
-        alt={`${partner} icon`}
-      />
+      <a href={urls}>
+        <Image
+          className={`ticker`}
+          fixed={source}
+          objectFit="contain"
+          objectPosition="center"
+          alt={`${partner} icon`}
+        />
+      </a>
     </LogoContainer>
   )
 }
@@ -63,14 +65,7 @@ const PartnerMarqueeContainer = styled("div")`
 `
 
 const PartnerMarquee = ({ partner }) => {
-  const partners = useRef([
-    "atlassian",
-    "gojek",
-    "aws",
-    "grammarly",
-    "gsoc",
-    "hacktoberfest",
-  ])
+  const partners = useRef(Partners)
 
   return (
     <PartnerMarqueeContainer>
@@ -79,7 +74,11 @@ const PartnerMarquee = ({ partner }) => {
         {() => (
           <TickerContainer>
             {partners.current.map((partner, index) => (
-              <PartnerLogo partner={partner} key={index} />
+              <PartnerLogo
+                partner={partner.partner}
+                urls={partner.url}
+                key={index}
+              />
             ))}
           </TickerContainer>
         )}

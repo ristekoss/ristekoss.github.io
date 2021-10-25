@@ -1,0 +1,26 @@
+[
+  {
+  "partner":"atlassian",
+  "url":"https://www.atlassian.com/"
+},
+{
+  "partner":"aws",
+  "url":"https://aws.amazon.com/"
+},
+{
+  "partner":"grammarly",
+  "url":"https://grammarly.com"
+},
+{
+  "partner":"gsoc",
+  "url":"https://summerofcode.withgoogle.com/"
+},
+{
+  "partner":"gojek",
+  "url":"https://www.gojek.com"
+},
+{
+  "partner":"hacktoberfest",
+  "url":"https://hacktoberfest.digitalocean.com/"
+}
+]
