@@ -136,7 +136,7 @@ const RenderBody = () => (
         <a> 2+ million users</a> and 200 community maintainers.
       </h1>
       <a
-        href={"https://discord.gg/NVCnCRxNvf"}
+        href={"https://discord.gg/R5JDWTGfXc"}
         target="_blank"
         rel="noopener noreferrer"
       >
