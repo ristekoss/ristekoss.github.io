@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.hero {
+    @apply flex pt-[64px] h-[var(--height-h-screen,800px)] items-start shrink-0;
+    background: linear-gradient(90deg, rgba(201, 206, 252, 0.00) 0%, #C9CEFC 100%);
+}
+
+.navigation {
+    display: flex;
+
+    @media (max-width: 840px) {
+        display: none;
+    }
+}
+
+.nav-mobile {
+    display: none;
+
+    @media (max-width: 840px) {
+        display: flex;
+    }
+}

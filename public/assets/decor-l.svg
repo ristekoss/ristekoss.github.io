@@ -1,0 +1,47 @@
+<svg width="938" height="134" viewBox="0 0 938 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_489_5884)">
+<g clip-path="url(#clip1_489_5884)">
+<rect width="134" height="67" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 670 134)" fill="#C424A3"/>
+<path d="M670 134L804 -5.85733e-06L804 134L670 134Z" fill="#5038BC"/>
+</g>
+<g clip-path="url(#clip2_489_5884)">
+<rect width="134" height="134" transform="translate(402 134) rotate(-90)" fill="#FFD668"/>
+<rect x="469" y="134" width="134" height="67" transform="rotate(-90 469 134)" fill="#C424A3"/>
+</g>
+<rect x="536" y="67" width="134" height="67" fill="#64E6FB"/>
+<circle cx="603" cy="67" r="45" transform="rotate(90 603 67)" fill="#5038BC"/>
+<g clip-path="url(#clip3_489_5884)">
+<path d="M-5.85733e-06 134L134 5.85733e-06L134 134L-5.85733e-06 134Z" fill="#C424A3"/>
+<circle cx="45" cy="45" r="45" transform="matrix(1 0 0 -1 22 112)" fill="#FFD668"/>
+</g>
+<rect width="134" height="134" transform="matrix(-1 0 0 1 268 0)" fill="#5038BC"/>
+<rect width="74" height="74" transform="matrix(-1 0 0 1 238 30)" fill="#64E6FB"/>
+<g clip-path="url(#clip4_489_5884)">
+<path d="M402 -1.17147e-05L268 134L402 134L402 -1.17147e-05Z" fill="#FFD668"/>
+<path d="M402 134L268 5.85733e-06L268 134L402 134Z" fill="#5038BC"/>
+</g>
+<g clip-path="url(#clip5_489_5884)">
+<circle cx="804" cy="134" r="134" transform="rotate(90 804 134)" fill="#C424A3"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_489_5884">
+<rect width="938" height="134" fill="white"/>
+</clipPath>
+<clipPath id="clip1_489_5884">
+<rect width="134" height="134" fill="white" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 670 134)"/>
+</clipPath>
+<clipPath id="clip2_489_5884">
+<rect width="134" height="134" fill="white" transform="translate(402 134) rotate(-90)"/>
+</clipPath>
+<clipPath id="clip3_489_5884">
+<rect width="134" height="134" fill="white" transform="matrix(1 0 0 -1 0 134)"/>
+</clipPath>
+<clipPath id="clip4_489_5884">
+<rect width="134" height="134" fill="white" transform="matrix(-1 0 0 -1 402 134)"/>
+</clipPath>
+<clipPath id="clip5_489_5884">
+<rect width="134" height="134" fill="white" transform="translate(938) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>
