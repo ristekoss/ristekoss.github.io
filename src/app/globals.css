@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -35,4 +38,14 @@
     @media (max-width: 840px) {
         display: flex;
     }
+}
+
+.slide {
+    transform: scale(0.5);
+    transition: transform 300ms;
+    transition-timing-function: ease-in-out
+}
+
+.activeSlide{
+    transform: scale(1);
 }

@@ -1,10 +1,10 @@
-import About from "./components/About";
-import Contributors from "./components/Contributors";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import NavigationBar from "./components/NavigationBar";
-import OurProducts from "./components/OurProducts";
-import Partners from "./components/Partners";
+import About from "./sections/About";
+import Contributors from "./sections/Contributors";
+import Footer from "./sections/Footer";
+import HeroSection from "./sections/HeroSection";
+import NavigationBar from "./sections/NavigationBar";
+import OurProducts from "./sections/OurProducts";
+import Partners from "./sections/Partners";
 
 export default function Home() {
   return (
