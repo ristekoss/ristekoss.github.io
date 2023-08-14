@@ -44,7 +44,7 @@ export default function Partners() {
                     <Slider {...settings} className="flex items-center"> 
                         {Partners.map((img : string, idx)  => {
                             return (
-                                <img src={img} className= {(idx === imageIndex)? "activeSlide max-h-[120px]" : "slide max-h-[120px]"}></img>
+                                <img src={img} key={idx} className= {(idx === imageIndex)? "activeSlide max-h-[120px]" : "slide max-h-[120px]"}></img>
                             )
                         })}
                     </Slider>
