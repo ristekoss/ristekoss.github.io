@@ -4,6 +4,7 @@
 
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -19,33 +20,31 @@
   }
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .hero {
-    @apply flex pt-[64px] h-[var(--height-h-screen,800px)] items-start shrink-0;
     background: linear-gradient(90deg, rgba(201, 206, 252, 0.00) 0%, #C9CEFC 100%);
-}
-
-.navigation {
-    display: flex;
-
-    @media (max-width: 840px) {
-        display: none;
-    }
-}
-
-.nav-mobile {
-    display: none;
-
-    @media (max-width: 840px) {
-        display: flex;
-    }
 }
 
 .slide {
     transform: scale(0.5);
-    transition: transform 300ms;
+    transition: transform 800ms;
     transition-timing-function: ease-in-out
 }
 
 .activeSlide{
     transform: scale(1);
+    transition: transform 800ms;
+    transition-timing-function: ease-in-out
+}
+
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+
+.edge-fade{
+    background: linear-gradient(90deg, #F1F5F9 0%, rgba(241, 245, 249, 0.00) 100%);
 }

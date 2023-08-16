@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="flex sm:flex-row justify-between px-[30px] py-[40px] sm:px-[76px] sm:py-12 text-sm flex-col text-center sm:text-left gap-10 sm:gap-0 max-w-sm h-fit sm:max-w-[840px] xl:max-w-[1440px]">
-      <div className="sm:w-fit sm:h-fit flex flex-col justify-between sm:gap-5 xl:gap-4 xl:h-[188px]">
-        <div className="flex xl:flex-row items-start justify-between flex-col gap-5 sm:w-[340px] xl:w-fit xl:gap-[116px]">
+    <footer className="flex md:flex-row justify-between px-[30px] py-[40px] md:px-[76px] md:py-12 text-sm flex-col text-center md:text-left gap-10 md:gap-0 max-w-sm h-fit md:max-w-[840px] lg:max-w-[1440px] mx-auto">
+      <div className="md:w-fit md:h-fit flex flex-col justify-between md:gap-5 lg:gap-4 lg:h-[188px]">
+        <div className="flex lg:flex-row items-start justify-between flex-col gap-5 md:w-[340px] lg:w-fit lg:gap-[116px]">
           <Image
-            className="mx-auto sm:mx-0"
+            className="mx-auto md:mx-0"
             src="/assets/logo.svg"
             alt="Ristek Fasilkom UI"
             width={254}
@@ -15,7 +15,7 @@ export default function Footer() {
           />
 
           <div className="flex flex-col gap-4">
-            <div className="flex flex-row items-center gap-2 justify-center sm:justify-start">
+            <div className="flex flex-row items-center gap-2 justify-center md:justify-start">
               <Image
                 src="/icons/location.svg"
                 alt="location"
@@ -25,7 +25,7 @@ export default function Footer() {
               <p className="font-semibold">Universitas Indonesia, Depok</p>
             </div>
 
-            <p className="xl:w-[430px]">
+            <p className="lg:w-[430px]">
               RISTEK is a student-founded non-profit organization from
               Universitas Indonesia's Faculty of Computer Science, supported by
               a United States of America 501(c)(3) non-profit.
@@ -38,25 +38,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="hidden sm:block">© 2023 RISTEK Fasilkom</p>
+        <p className="hidden md:block">© 2023 RISTEK Fasilkom</p>
       </div>
 
-      <div className="w-fit h-fit sm:w-fit sm:h-[233px] xl:h-[188px] flex flex-col sm:justify-between items-center gap-5">
-        <div className="flex flex-row gap-4 sm:gap-5">
+      <div className="w-fit h-fit md:w-fit md:h-[233px] lg:h-[188px] flex flex-col md:justify-between items-center gap-5">
+        <div className="flex flex-row gap-4 md:gap-5">
           <div className="flex flex-col gap-2">
-            <p className="font-bold text-xs sm:text-sm">
+            <p className="font-semibold text-xs md:text-sm">
               Official Learning Partner
             </p>
             <div className="flex flex-row gap-3">
               <Image
-                className="w-[84px] sm:w-[92px]"
+                className="w-[84px] md:w-[92px]"
                 src="/icons/gojek.svg"
                 alt="Gojek logo"
                 width={92}
                 height={24}
               />
               <Image
-                className="w-[60px] sm:w-[67px]"
+                className="w-[60px] md:w-[67px]"
                 src="/icons/goto-financial.svg"
                 alt="Gojek Financial"
                 width={67}
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <Image
-            className="h-[70px] sm:h-[78px]"
+            className="h-[70px] md:h-[78px]"
             src="/icons/vertical-divider.svg"
             alt=""
             width={1}
@@ -74,9 +74,9 @@ export default function Footer() {
           />
 
           <div className="flex flex-col gap-4 items-center">
-            <p className="font-bold text-xs sm:text-sm">Accelerated by</p>
+            <p className="font-semibold text-xs md:text-sm">Accelerated by</p>
             <Image
-              className="w-[85px] sm:w-[93px]"
+              className="w-[85px] md:w-[93px]"
               src="/icons/hackplus.svg"
               alt="Hack+ logo"
               width={92.96}
@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div
           id="socmeds-container"
-          className="gap-8 flex flex-row justify-between xl:mr-auto"
+          className="gap-8 flex flex-row justify-between lg:mr-auto"
         >
           <Image
             src="/icons/instagram.svg"
@@ -126,7 +126,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="sm:hidden">© 2023 RISTEK Fasilkom</p>
+      <p className="md:hidden">© 2023 RISTEK Fasilkom</p>
     </footer>
   );
 }
