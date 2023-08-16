@@ -9,6 +9,7 @@ interface Props {
   platform: string;
   description: string;
   githubLink: string;
+  appLink: string;
 }
 
 function ProductCard({
@@ -19,6 +20,7 @@ function ProductCard({
   platform,
   description,
   githubLink,
+  appLink,
 }: Props) {
   return (
     <div className="w-[300px] h-fit rounded-[20px] p-5 bg-white text-sm xl:w-[360px]">
@@ -46,23 +48,31 @@ function ProductCard({
         </div>
 
         <div className="buttons-container ml-auto flex flex-row gap-3">
-          <button className="bg-[#C9CEFC] p-[10px] rounded-lg">
+          <a
+            href={githubLink}
+            target="_blank"
+            className="bg-[#C9CEFC] p-[10px] rounded-lg"
+          >
             <Image
               src="icons/github.svg"
               alt=""
               width={20}
               height={20}
             />
-          </button>
+          </a>
 
-          <button className="bg-[#C9CEFC] p-[10px] rounded-lg">
+          <a
+            href={appLink}
+            target="_blank"
+            className="bg-[#C9CEFC] p-[10px] rounded-lg"
+          >
             <Image
               src="icons/box-arrow-up-right.svg"
               alt=""
               width={20}
               height={20}
             />
-          </button>
+          </a>
 
           <button className="bg-[#C9CEFC] p-[10px] rounded-lg">
             <Image

@@ -12,6 +12,7 @@ interface Products {
   platform: string;
   description: string;
   githubLink: string;
+  appLink: string;
 }
 
 export default function OurProducts() {
@@ -30,7 +31,8 @@ export default function OurProducts() {
       platform: "Web",
       description:
         "Universitas Indonesia's #1 student course planning app with over 500 thousand users across 14 faculties.",
-      githubLink: "https://www.github.com",
+      githubLink: "https://github.com/ristekoss/susunjadwal-frontend",
+      appLink: "https://susunjadwal.cs.ui.ac.id",
     },
     {
       imageSrc: "icons/bikun-tracker.svg",
@@ -41,6 +43,7 @@ export default function OurProducts() {
       description:
         "Experience the Convenience of Riding Bikun with Bikun Tracker! With Bikun Tracker, you no longer have to worry about when Bikun will come or stress about its arrival schedule.",
       githubLink: "https://www.github.com",
+      appLink: "https://bikun.ui.ac.id/",
     },
     {
       imageSrc: "icons/ristek-link.svg",
@@ -50,7 +53,8 @@ export default function OurProducts() {
       platform: "Web",
       description:
         "World's #1 Easy to use, no-logins, customisable url shortener. 1 million shortened links!",
-      githubLink: "https://www.github.com",
+      githubLink: "https://github.com/ristekoss/ristek-link",
+      appLink: "https://ristek.link/",
     },
     {
       imageSrc: "icons/ulas-kelas.svg",
@@ -60,20 +64,9 @@ export default function OurProducts() {
       platform: "Mobile",
       description:
         "Say goodbye to confusion and hello to informed decision-making. UlasKelas is here to be your clever companion to choose your courses!",
-      githubLink: "https://www.github.com",
-    },
-  ];
-
-  const tes: Products[] = [
-    {
-      imageSrc: "icons/logo-sunjad.svg",
-      imageAlt: "Susun Jadwal",
-      imageWidth: 240,
-      publishedYear: "2020",
-      platform: "Web",
-      description:
-        "Universitas Indonesia's #1 student course planning app with over 500 thousand users across 14 faculties.",
-      githubLink: "https://www.github.com",
+      githubLink: "https://github.com/ristekoss/ulaskelas-frontend",
+      appLink:
+        "https://play.google.com/store/apps/details?id=com.ristek.ulaskelas&hl=id-ID",
     },
   ];
 
