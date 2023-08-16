@@ -21,7 +21,7 @@ function ProductCard({
   githubLink,
 }: Props) {
   return (
-    <div className="w-[300px] h-fit rounded-[20px] p-5 bg-white text-sm flex-shrink-0 flex-grow-0">
+    <div className="w-[300px] h-fit rounded-[20px] p-5 bg-white text-sm">
       <div className="card-content flex flex-col gap-[15px]">
         <div className="upper-content">
           <div className="brand h-12 w-fit">

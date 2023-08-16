@@ -15,7 +15,9 @@ interface Products {
 }
 
 export default function OurProducts() {
-  const [productShowIndex, setProductShowIndex] = useState<number>(0);
+  const initialSlide = 0;
+  const [productShowIndex, setProductShowIndex] =
+    useState<number>(initialSlide);
 
   const sliderRef = useRef<Slider | null>(null);
 
@@ -80,8 +82,9 @@ export default function OurProducts() {
     slidesToShow: 1,
     centerMode: true,
     autoplay: false,
-    speed: 1000,
     arrows: false,
+    initialSlide,
+    centerPadding: "-6px",
     beforeChange: (currentSlide, nextSlide) => {
       setProductShowIndex(nextSlide);
     },
@@ -98,88 +101,98 @@ export default function OurProducts() {
   return (
     <div
       id="products-container"
-      className="bg-[#3C317E] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col gap-10"
+      className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 overflow-hidden"
     >
-      <h1 className="font-bold text-white text-4xl w-[320px] mx-auto text-center xl:hidden">
-        Explore Our Products!
-      </h1>
+      <Image
+        className="absolute mx-auto"
+        src="assets/oss-logo.svg"
+        alt=""
+        width={396}
+        height={695}
+      />
 
-      <div className="hidden xl:flex flex-row gap-10 justify-center items-center">
-        <h1 className="text-white font-bold text-center text-7xl">
+      <div className="z-10">
+        <h1 className="font-bold text-white text-4xl w-[320px] mx-auto text-center xl:hidden">
           Explore Our Products!
         </h1>
 
-        <Image
-          src="assets/decor-2.svg"
-          alt=""
-          width={321}
-          height={107}
-        />
-      </div>
+        <div className="hidden xl:flex flex-row gap-10 justify-center items-center">
+          <h1 className="text-white font-bold text-center text-7xl">
+            Explore Our Products!
+          </h1>
 
-      <div id="carousel-card-product">
-        <Slider
-          {...settings}
-          ref={sliderRef}
-          className="w-[300px] h-[347px] mx-auto flex flex-row gap-3"
-        >
-          {productsInfo.map((product, index) => {
-            return (
-              <ProductCard
-                {...product}
-                key={index}
-              />
-            );
-          })}
-        </Slider>
+          <Image
+            src="assets/decor-2.svg"
+            alt=""
+            width={321}
+            height={107}
+          />
+        </div>
 
-        <div
-          id="cards-navigation"
-          className="flex flex-row gap-11 justify-between"
-        >
-          <button
-            className="bg-white rounded-full w-16 h-16"
-            onClick={handlePrevProduct}
-          >
-            <Image
-              className="mx-auto"
-              src="icons/caret-left-fill.svg"
-              alt=""
-              width={52}
-              height={52}
-            />
-          </button>
-
-          <div
-            id="pager-carousel-products"
-            className="flex flex-row gap-3 justify-center items-center"
+        <div id="carousel-card-product">
+          <Slider
+            {...settings}
+            ref={sliderRef}
+            className="w-[300px] h-[347px] mx-auto flex flex-row"
           >
             {productsInfo.map((product, index) => {
               return (
-                <div
-                  className={`w-3 h-3 ${
-                    index == productShowIndex
-                      ? "bg-[#64E6FB]"
-                      : "bg-neutral-400"
-                  } rounded-full`}
-                ></div>
+                <ProductCard
+                  {...product}
+                  key={index}
+                />
               );
             })}
-            {/* <div className="w-3 h-3 bg-[#64E6FB] rounded-full"></div> */}
-          </div>
+          </Slider>
 
-          <button
-            className="bg-white rounded-full w-16 h-16"
-            onClick={handleNextProduct}
+          <div
+            id="cards-navigation"
+            className="flex flex-row gap-11 justify-between"
           >
-            <Image
-              className="mx-auto"
-              src="icons/caret-right-fill.svg"
-              alt=""
-              width={52}
-              height={52}
-            />
-          </button>
+            <button
+              className="bg-white rounded-full w-16 h-16"
+              onClick={handlePrevProduct}
+            >
+              <Image
+                className="mx-auto"
+                src="icons/caret-left-fill.svg"
+                alt=""
+                width={52}
+                height={52}
+              />
+            </button>
+
+            <div
+              id="pager-carousel-products"
+              className="flex flex-row gap-3 justify-center items-center"
+            >
+              {productsInfo.map((product, index) => {
+                return (
+                  <div
+                    className={`w-3 h-3 ${
+                      index == productShowIndex
+                        ? "bg-[#64E6FB]"
+                        : "bg-neutral-400"
+                    } rounded-full`}
+                  ></div>
+                );
+              })}
+              {/* <div className="w-3 h-3 bg-[#64E6FB] rounded-full"></div> */}
+            </div>
+
+            <button
+              className="bg-white rounded-full w-16 h-16"
+              onClick={handleNextProduct}
+            >
+              <Image
+                className="mx-auto"
+                src="icons/caret-right-fill.svg"
+                alt=""
+                width={52}
+                height={52}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
