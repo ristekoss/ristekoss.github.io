@@ -79,7 +79,7 @@ export default function OurProducts() {
 
   const settings: Settings = {
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     centerMode: true,
     autoplay: false,
     arrows: false,
@@ -88,6 +88,20 @@ export default function OurProducts() {
     beforeChange: (currentSlide, nextSlide) => {
       setProductShowIndex(nextSlide);
     },
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 839,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const handleNextProduct = () => {
@@ -101,9 +115,17 @@ export default function OurProducts() {
   return (
     <div
       id="products-container"
-      className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 overflow-hidden"
+      className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 overflow-hidden md:h-[1200px] md:p-0 md:justify-between xl:h-[800px]"
     >
-      <Image
+      {/* <Image
+        className="absolute mx-auto"
+        src="assets/oss-logo.svg"
+        alt=""
+        width={396}
+        height={695}
+      /> */}
+
+      {/* <Image
         className="absolute mx-auto"
         src="assets/oss-logo.svg"
         alt=""
@@ -111,8 +133,56 @@ export default function OurProducts() {
         height={695}
       />
 
-      <div className="z-10">
-        <h1 className="font-bold text-white text-4xl w-[320px] mx-auto text-center xl:hidden">
+      <Image
+        className="absolute mx-auto"
+        src="assets/oss-logo.svg"
+        alt=""
+        width={396}
+        height={695}
+      /> */}
+
+      <div
+        id="decor-tablet-top-right"
+        className="hidden md:flex md:flex-row md:justify-end xl:hidden"
+      >
+        <div className="rotate-180">
+          <div>
+            <Image
+              src="assets/RISTEK 8.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
+            <Image
+              src="assets/decor-s-1.svg"
+              className="rotate-90"
+              alt=""
+              width={116}
+              height={116}
+            />
+          </div>
+          <div className="flex flex-row">
+            <Image
+              src="assets/RISTEK 3.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
+            <Image
+              src="assets/RISTEK 20.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="z-10 flex flex-col gap-10">
+        <h1 className="font-bold text-white text-4xl w-[320px] mx-auto text-center md:text-6xl md:w-fit xl:hidden">
           Explore Our Products!
         </h1>
 
@@ -129,11 +199,27 @@ export default function OurProducts() {
           />
         </div>
 
-        <div id="carousel-card-product">
+        <div
+          id="carousel-card-product"
+          className="md:flex md:flex-row md:items-center md:justify-center md:gap-3"
+        >
+          <button
+            className="hidden bg-white rounded-full w-16 h-16 md:block"
+            onClick={handlePrevProduct}
+          >
+            <Image
+              className="mx-auto"
+              src="icons/caret-left-fill.svg"
+              alt=""
+              width={52}
+              height={52}
+            />
+          </button>
+
           <Slider
             {...settings}
             ref={sliderRef}
-            className="w-[300px] h-[347px] mx-auto flex flex-row"
+            className="w-[300px] h-[347px] mx-auto flex flex-row md:w-[612px] md:mx-0 xl:w-[1120px] xl:h-[340px]"
           >
             {productsInfo.map((product, index) => {
               return (
@@ -145,9 +231,22 @@ export default function OurProducts() {
             })}
           </Slider>
 
+          <button
+            className="hidden bg-white rounded-full w-16 h-16 md:block"
+            onClick={handleNextProduct}
+          >
+            <Image
+              className="mx-auto"
+              src="icons/caret-right-fill.svg"
+              alt=""
+              width={52}
+              height={52}
+            />
+          </button>
+
           <div
             id="cards-navigation"
-            className="flex flex-row gap-11 justify-between"
+            className="flex flex-row gap-11 justify-between md:hidden"
           >
             <button
               className="bg-white rounded-full w-16 h-16"
@@ -192,6 +291,46 @@ export default function OurProducts() {
                 height={52}
               />
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="decor-tablet-bottom-left"
+        className="hidden md:flex md:flex-row xl:hidden"
+      >
+        <div>
+          <div>
+            <Image
+              src="assets/RISTEK 8.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
+            <Image
+              src="assets/decor-s-1.svg"
+              className="rotate-90"
+              alt=""
+              width={116}
+              height={116}
+            />
+          </div>
+          <div className="flex flex-row">
+            <Image
+              src="assets/RISTEK 3.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
+            <Image
+              src="assets/RISTEK 20.svg"
+              className="rotate-180"
+              alt=""
+              width={116}
+              height={116}
+            />
           </div>
         </div>
       </div>
