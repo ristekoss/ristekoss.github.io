@@ -9,13 +9,13 @@ import Partners from "./sections/Partners";
 export default function Home() {
   return (
     <div>
-      {/* <NavigationBar/> */}
-      {/* <HeroSection/> */}
-      {/* <About/> */}
+      <NavigationBar/>
+      <HeroSection/>
+      <About/>
       <OurProducts />
-      {/* <Contributors/> */}
-      {/* <Partners /> */}
-      {/* <Footer /> */}
+      <Contributors/>
+      <Partners />
+      <Footer />
     </div>
   );
 }

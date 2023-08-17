@@ -261,8 +261,9 @@ export default function OurProducts() {
               {productsInfo.map((product, index) => {
                 return (
                   <div
+                    key={index}
                     className={`w-3 h-3 ${
-                      index == productShowIndex
+                    index == productShowIndex
                         ? "bg-[#64E6FB]"
                         : "bg-neutral-400"
                     } rounded-full`}

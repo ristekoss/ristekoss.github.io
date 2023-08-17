@@ -1,7 +1,7 @@
 
 export default function NavigationBar() {
     return (
-      <div className="flex flex-row fixed z-[2] bg-white h-[64px] w-[100%] 
+      <div className="flex flex-row fixed z-20 bg-white h-[64px] w-[100%] 
                       lg:pr-[80px] sm:pr-[40px] pr-[32px]
                       lg:pl-[80px] sm:pl-[40px] pl-[32px]
                       items-center justify-between">
