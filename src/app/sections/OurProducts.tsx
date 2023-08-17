@@ -108,7 +108,7 @@ export default function OurProducts() {
   return (
     <div
       id="products"
-      className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 overflow-hidden md:h-[1200px] md:p-0 md:justify-between xl:h-[800px]"
+      className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 md:gap-0 overflow-hidden md:h-[1200px] md:p-0 md:justify-between xl:h-[800px]"
     >
       {/* <Image
         className="absolute mx-auto"
@@ -263,7 +263,7 @@ export default function OurProducts() {
                   <div
                     key={index}
                     className={`w-3 h-3 ${
-                    index == productShowIndex
+                      index == productShowIndex
                         ? "bg-[#64E6FB]"
                         : "bg-neutral-400"
                     } rounded-full`}
