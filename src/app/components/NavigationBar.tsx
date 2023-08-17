@@ -16,7 +16,7 @@ export default function NavigationBar() {
             <img src={"/assets/logo.svg"} ></img>
         </a>
 
-        <a href="#" className="sm:hidden block">
+        <a href="#" className="sm:hidden block" onClick={()=> {showMenu(!show)}}>
             <img src={"/assets/logogram.svg"} ></img>
         </a>
 
@@ -53,8 +53,8 @@ export default function NavigationBar() {
         </div>
 
         {show &&
-        <div className="h-[100%] w-[100%] fixed z-[15]">
-            <div className="menu-dropdown flex flex-col justify-center fixed h-[196px] w-[100%] bg-[#E2E8F0] text-base font-semibold mt-[64px]  gap-[16px] pl-8 pr-8 pt-4 pb-4">
+        <div className="h-[100%] w-[100%] fixed z-[15] md:hidden">
+            <div className="fade-slide-in flex flex-col justify-center fixed h-[196px] w-[100%] bg-[#E2E8F0] text-base font-semibold mt-[64px]  gap-[16px] pl-8 pr-8 pt-4 pb-4">
                 <a href="#" onClick={()=> {showMenu(!show)}}>
                     <button>Home</button>
                 </a>
@@ -75,7 +75,7 @@ export default function NavigationBar() {
                 </a>
 
             </div>
-            <div className="h-[100%] w-[100%] z-0" onClick={()=> {showMenu(!show)}}></div>
+            <div className="h-[100%] w-[100%] z-0 bg-black bg-opacity-30" onClick={()=> {showMenu(!show)}}></div>
         </div>}
         </>
     )

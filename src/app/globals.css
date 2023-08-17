@@ -49,7 +49,7 @@ body {
     background: linear-gradient(90deg, #F1F5F9 0%, rgba(241, 245, 249, 0.00) 100%);
 }
 
-.menu-dropdown {
+.fade-slide-in {
     animation: fade-slide-in 300ms ease-in-out;
 }
 
