@@ -19,40 +19,65 @@ export default function Partners() {
     const Partners : string[] = [Gojek, Grammarly, Tiket, Techinasia, Google, Traveloka, Dicoding, Hack, Datacamp]
     const settings : Settings = {
         infinite : true,
-        slidesToShow : 3,
         centerMode : true,
+        slidesToShow: 3,
         autoplay: true,
-        speed: 1000,
+        speed: 1500,
         autoplaySpeed: 2000,
         beforeChange : (currentSlide, nextSlide) =>{
             setImageIndex(nextSlide)
         },
+        responsive: [
+            {
+              breakpoint: 580,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
     }
 
     return (
-            <div className="relative bg-[#F1F5F9] h-[var(--height-h-screen,800px)] flex items-center">
+            <div className="relative bg-[#F1F5F9] sm:h-[var(--height-h-screen,800px)] h-[650px] flex items-center">
                 <div className="absolute flex flex-col justify-between w-[100%] h-[100%]">
 
-                    <div className="flex flex-row justify-between w-[100%] justify-center items-center">
-                        <img src={"/assets/decor-m-3.svg"} className="left-0"></img>
-                        <p className="text-[color:var(--primary-colors-purple-heart,#5038BC)] text-7xl font-bold leading-[72px];">
+                    <div className="flex sm:flex-row flex-col justify-between w-[100%] sm:items-start items-center">
+
+                        <img src={"/assets/decor-m-3.svg"} className="left-0 lg:block hidden"></img>
+                        <img src={"/assets/decor-xs-1.svg"} className="left-0 lg:hidden sm:block hidden max-w-[15%]"></img>
+
+                        <div className="flex flex-row justify-center">
+                        <img src={"/assets/decor-xs-2.svg"} className="left-0 sm:hidden block"></img>
+                        <img src={"/assets/decor-xs-1.svg"} className="left-0 sm:hidden block invisible"></img>
+                        </div>
+
+                        <p className="text-[#5038BC] max-h-[134px] lg:pt-0 pt-[56px] text-center sm:text-7xl text-4xl font-bold
+                                    sm:pl-0 pl-10 
+                                    sm:pr-0 pr-10">
                             Educational Partners
                         </p>
-                        <img src={"/assets/decor-m-4.svg"} className="right-0"></img>
-                    </div>
 
-                    <Slider {...settings} className="flex items-center"> 
-                        {Partners.map((img : string, idx)  => {
-                            return (
-                                <img src={img} key={idx} className= {(idx === imageIndex)? "activeSlide max-h-[120px]" : "slide max-h-[120px]"}></img>
-                            )
-                        })}
-                    </Slider>
+                        <img src={"/assets/decor-xs-2.svg"} className="left-0 lg:hidden sm:block hidden max-w-[15%]"></img>
+                        <img src={"/assets/decor-m-4.svg"} className="right-0 lg:block hidden"></img>
+
+                    </div>
+                    
+                    <div className="lg:pl-20 pl-0 lg:pr-20 pr-0 sm:mt-0 mt-[-124px]">
+                        <div className="edge-fade sm:w-[240px] w-[84px] h-[120px] bg-black absolute left-0 lg:ml-20 ml-0 z-[1]"></div>
+                        <div className="edge-fade sm:w-[240px] w-[84px] h-[120px] bg-black absolute right-0 lg:mr-20 mr-0 z-[1] rotate-180"></div>
+                        <Slider {...settings} arrows={false}>
+                            {Partners.map((img : string, idx)  => {
+                                return (
+                                    <img src={img} key={idx} className= {(idx === imageIndex)? "activeSlide sm:h-[120px] h-[84px]" : "slide sm:h-[120px] h-[84px]"}></img>
+                                )   
+                            })}
+                        </Slider>
+                    </div>
 
                     <div className="flex justify-center items-center bottom-0">
-                        <img src={"/assets/decor-l.svg"} className="left-0"></img>
+                        <img src={"/assets/decor-l.svg"}></img>
                     </div>
-
                 </div>
             </div>
     )

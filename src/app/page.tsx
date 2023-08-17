@@ -1,8 +1,8 @@
 import About from "./sections/About";
 import Contributors from "./sections/Contributors";
-import Footer from "./sections/Footer";
+import Footer from "./components/Footer";
 import HeroSection from "./sections/HeroSection";
-import NavigationBar from "./sections/NavigationBar";
+import NavigationBar from "./components/NavigationBar";
 import OurProducts from "./sections/OurProducts";
 import Partners from "./sections/Partners";
 

@@ -15,10 +15,12 @@ const config: Config = {
       },
     },
     screens: {
-      sm: "360px",
-      md: "840px",
-      xl: "1440px",
-    },
+        xs: "360px",
+        sm: "580px",
+        md: "840px",
+        lg: "1024px",
+        xl: "1440px"
+    }
   },
   plugins: [],
 };
