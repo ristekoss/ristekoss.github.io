@@ -47,9 +47,9 @@ export default function Partners() {
                         <img src={"/assets/decor-m-3.svg"} className="left-0 lg:block hidden"></img>
                         <img src={"/assets/decor-xs-1.svg"} className="left-0 lg:hidden sm:block hidden max-w-[15%]"></img>
 
-                        <div className="flex flex-row justify-center">
+                        <div className="flex flex-row justify-center sm:hidden block">
                         <img src={"/assets/decor-xs-2.svg"} className="left-0 sm:hidden block"></img>
-                        <img src={"/assets/decor-xs-1.svg"} className="left-0 sm:hidden block invisible"></img>
+                        <img src={"/assets/decor-xs-1.svg"} className="left-0 sm:hidden invisible"></img>
                         </div>
 
                         <p className="text-[#5038BC] max-h-[134px] lg:pt-0 pt-[56px] text-center sm:text-7xl text-4xl font-bold

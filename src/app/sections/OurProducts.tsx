@@ -107,7 +107,7 @@ export default function OurProducts() {
 
   return (
     <div
-      id="products-container"
+      id="products"
       className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 overflow-hidden md:h-[1200px] md:p-0 md:justify-between xl:h-[800px]"
     >
       {/* <Image

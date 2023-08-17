@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="flex
+        <div id="about" className="flex
                         relative 
                         bg-[#F1F5F9] 
                         w-[100%] 

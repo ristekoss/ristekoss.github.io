@@ -48,3 +48,19 @@ body {
 .edge-fade{
     background: linear-gradient(90deg, #F1F5F9 0%, rgba(241, 245, 249, 0.00) 100%);
 }
+
+.menu-dropdown {
+    animation: fade-slide-in 300ms ease-in-out;
+}
+
+@keyframes fade-slide-in {
+    0% {
+        opacity: 0;    
+        transform: translate(0, -50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+}
