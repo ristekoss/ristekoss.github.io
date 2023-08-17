@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="flex md:flex-row justify-between px-[30px] py-[40px] md:px-[76px] md:py-12 text-sm flex-col text-center md:text-left gap-10 md:gap-0 max-w-sm h-fit md:max-w-[840px] lg:max-w-[1440px] mx-auto">
-      <div className="md:w-fit md:h-fit flex flex-col justify-between md:gap-5 lg:gap-4 lg:h-[188px]">
-        <div className="flex lg:flex-row items-start justify-between flex-col gap-5 md:w-[340px] lg:w-fit lg:gap-[116px]">
+      <div className="md:w-fit md:h-fit flex flex-col justify-between md:gap-5 lg:gap-4 lg:h-fit">
+        <div className="flex lg:flex-row items-start justify-between flex-col gap-5 md:w-[340px] lg:w-fit lg:gap-10 xl:gap-[116px]">
           <Image
             className="mx-auto md:mx-0"
             src="/assets/logo.svg"
@@ -25,7 +25,7 @@ export default function Footer() {
               <p className="font-semibold">Universitas Indonesia, Depok</p>
             </div>
 
-            <p className="lg:w-[430px]">
+            <p className="lg:w-[260px] xl:w-[430px]">
               RISTEK is a student-founded non-profit organization from
               Universitas Indonesia's Faculty of Computer Science, supported by
               a United States of America 501(c)(3) non-profit.
