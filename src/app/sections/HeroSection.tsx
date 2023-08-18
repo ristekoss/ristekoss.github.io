@@ -32,7 +32,7 @@ export default function HeroSection() {
                             Our Products
                         </button>
                     </a>
-                    <a href="">
+                    <a href="https://discord.com/invite/b4D99hZZ" target="_blank">
                         <button className="flex flex-row bg-[#C9CEFC] rounded-[8px] text-[#5038BC] sm:h-[48px] h-[40px] sm:w-[214px] w-[186px] items-center justify-center gap-[8px]">
                             <img src={"/assets/chat.svg"}></img>
                             Chill With Us

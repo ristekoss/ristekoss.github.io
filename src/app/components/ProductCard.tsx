@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 interface Props {
+  name: string;
   imageSrc: string;
   imageAlt: string;
   imageWidth: number;
@@ -10,9 +11,12 @@ interface Props {
   description: string;
   githubLink: string;
   appLink: string;
+  modal: Function;
+  modalApp: Function
 }
 
 function ProductCard({
+  name,
   imageSrc,
   imageAlt,
   imageWidth,
@@ -21,12 +25,14 @@ function ProductCard({
   description,
   githubLink,
   appLink,
+  modal,
+  modalApp
 }: Props) {
   return (
     <div className="w-[300px] h-fit rounded-[20px] p-5 bg-white text-sm xl:w-[360px]">
       <div className="card-content flex flex-col gap-[15px]">
         <div className="upper-content">
-          <div className="brand h-12 w-fit flex flex-row justify-center items-center">
+          <div className="brand h-12 w-fit">
             <Image
               src={imageSrc}
               alt={imageAlt}
@@ -74,7 +80,7 @@ function ProductCard({
             />
           </a>
 
-          <button className="bg-[#C9CEFC] p-[10px] rounded-lg">
+          <button className="bg-[#C9CEFC] p-[10px] rounded-lg" onClick={() => {modal(); modalApp(name)}}>
             <Image
               src="icons/code-slash.svg"
               alt=""

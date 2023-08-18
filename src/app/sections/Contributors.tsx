@@ -1,6 +1,51 @@
 import ContributorsCard from "../components/ContributorsCard";
 
+interface Contributors {
+    url : string,
+    name : string,
+    role : string
+}
+
 export default function Contributors() {
+
+    const contributors : Contributors[] = [
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        },
+        {
+            url:"/images/placeholder.png",
+            name:"Tukang Ulas Kelas",
+            role:"Designer"
+        }
+    ] 
+
     return (
         <div className="relative bg-[#F1F5F9] flex items-center">
 
@@ -22,11 +67,11 @@ export default function Contributors() {
             </div>
 
             <div className="relative flex flex-wrap align-center justify-center gap-[30px] sm:mt-[256px] mt-[156px] mb-[300px] pl-[42px] pr-[42px]">
-                <ContributorsCard url="/images/placeholder.png" name="Smitty Werben Jagerman Jensen" role="Designer"/>
-                <ContributorsCard url="/images/placeholder.png" name="Smitty Werben Jagerman Jensen" role="Designer"/>
-                <ContributorsCard url="/images/placeholder.png" name="Smitty Werben Jagerman Jensen" role="Designer"/>
-                <ContributorsCard url="/images/placeholder.png" name="Smitty Werben Jagerman Jensen" role="Designer"/>
-                <ContributorsCard url="/images/placeholder.png" name="Smitty Werben Jagerman Jensen" role="Designer"/>
+                    {contributors.map((contributors, index) => {
+                        return (
+                        <ContributorsCard url={contributors.url} name={contributors.name} role={contributors.role} key={index}/>
+                        )
+                    })}
             </div>
 
         </div>

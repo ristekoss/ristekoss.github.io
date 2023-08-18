@@ -4,14 +4,18 @@ import { useState } from "react";
 export default function NavigationBar() {
   const [show, showMenu] = useState(false);
 
-  const handleDiscordLink = () => {
-    window.open("https://discord.gg/b4D99hZZ", "_blank");
-  };
+  if (typeof window !== 'undefined'){
+    if (show) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'unset';
+    }
+  }
 
   return (
     <>
       <div
-        className="flex flex-row fixed z-20 bg-white h-[64px] w-[100%] 
+        className="flex flex-row fixed z-20 bg-white h-[64px] w-[100%] top-0
                       lg:pr-[80px] sm:pr-[40px] pr-[32px]
                       lg:pl-[80px] sm:pl-[40px] pl-[32px]
                       items-center justify-between"
@@ -27,7 +31,7 @@ export default function NavigationBar() {
           href="#"
           className="sm:hidden block"
           onClick={() => {
-            showMenu(!show);
+            showMenu(false);
           }}
         >
           <img src={"/assets/logogram.svg"}></img>
@@ -46,11 +50,11 @@ export default function NavigationBar() {
             </button>
           </a>
 
-          <a href="">
+          <a href="https://discord.com/invite/b4D99hZZ"
+             target="_blank">
             <div className="flex flex-row lg:pr-[32px] pr-[24px] lg:pl-[32px] pl-[24px] justify-center items-center gap-[8px]">
               <img src={"/assets/chat.svg"}></img>
               <button
-                onClick={handleDiscordLink}
                 className="text-[#5038BC]"
               >
                 Chill With Us
@@ -109,13 +113,13 @@ export default function NavigationBar() {
             </a>
 
             <a
-              href=""
+              href="https://discord.com/invite/b4D99hZZ"
+              target="_blank"
               onClick={() => {
                 showMenu(!show);
               }}
             >
               <button
-                onClick={handleDiscordLink}
                 className="flex flex-row text-[#5038BC] gap-[8px]"
               >
                 <img src={"/assets/chat.svg"}></img>

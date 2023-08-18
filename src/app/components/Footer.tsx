@@ -89,40 +89,50 @@ export default function Footer() {
           id="socmeds-container"
           className="gap-8 flex flex-row justify-between lg:mr-auto"
         >
-          <Image
-            src="/icons/instagram.svg"
-            alt="RISTEK's Instagram"
-            width={24}
-            height={24}
-          />
+            <a href="https://www.instagram.com/ristek.csui/">
+                <Image
+                    src="/icons/instagram.svg"
+                    alt="RISTEK's Instagram"
+                    width={24}
+                    height={24}
+                />
+            </a>
 
-          <Image
-            src="/icons/twitter.svg"
-            alt="RISTEK's Twitter"
-            width={29}
-            height={24}
-          />
+            <a href="https://twitter.com/RistekCSUI">
+                <Image
+                    src="/icons/twitter.svg"
+                    alt="RISTEK's Twitter"
+                    width={29}
+                    height={24}
+                />
+            </a>
 
-          <Image
-            src="/icons/linkedin.svg"
-            alt="RISTEK's LinkedIn"
-            width={25}
-            height={24}
-          />
+            <a href="https://www.linkedin.com/company/ristek-fakultas-ilmu-komputer-universitas-indonesia">
+                <Image
+                    src="/icons/linkedin.svg"
+                    alt="RISTEK's LinkedIn"
+                    width={25}
+                    height={24}
+                />
+            </a>
 
-          <Image
-            src="/icons/line.svg"
-            alt="RISTEK's Official Account LINE"
-            width={25}
-            height={24}
-          />
+            <a href="https://liff.line.me/1645278921-kWRPP32q?accountId=rye2953f&openerPlatform=webview&openerKey=webview%3AunifiedSearch">
+                <Image
+                    src="/icons/line.svg"
+                    alt="RISTEK's Official Account LINE"
+                    width={25}
+                    height={24}
+                />
+            </a>
 
-          <Image
-            src="/icons/medium.svg"
-            alt="RISTEK's Medium"
-            width={24}
-            height={24}
-          />
+            <a href="https://medium.com/ristek-fasilkom">
+                <Image
+                    src="/icons/medium.svg"
+                    alt="RISTEK's Medium"
+                    width={24}
+                    height={24}
+                />
+            </a>
         </div>
       </div>
 

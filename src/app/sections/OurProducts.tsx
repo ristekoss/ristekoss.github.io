@@ -5,6 +5,7 @@ import Image from "next/image";
 import Slider, { Settings } from "react-slick";
 
 interface Products {
+  name: string;
   imageSrc: string;
   imageAlt: string;
   imageWidth: number;
@@ -15,7 +16,8 @@ interface Products {
   appLink: string;
 }
 
-export default function OurProducts() {
+
+export default function OurProducts(props : any) {
   const initialSlide = 0;
   const [productShowIndex, setProductShowIndex] =
     useState<number>(initialSlide);
@@ -24,6 +26,7 @@ export default function OurProducts() {
 
   const productsInfo: Products[] = [
     {
+      name: "Susun Jadwal",
       imageSrc: "icons/logo-sunjad.svg",
       imageAlt: "Susun Jadwal",
       imageWidth: 240,
@@ -35,6 +38,7 @@ export default function OurProducts() {
       appLink: "https://susunjadwal.cs.ui.ac.id",
     },
     {
+      name: "Bikun Tracker",
       imageSrc: "icons/bikun-tracker.svg",
       imageAlt: "Bikun Tracker",
       imageWidth: 225,
@@ -46,6 +50,7 @@ export default function OurProducts() {
       appLink: "https://bikun.ui.ac.id/",
     },
     {
+      name: "Ristek Link",
       imageSrc: "icons/ristek-link.svg",
       imageAlt: "Ristek Link",
       imageWidth: 188,
@@ -57,6 +62,7 @@ export default function OurProducts() {
       appLink: "https://ristek.link/",
     },
     {
+      name: "Ulas Kelas",
       imageSrc: "icons/ulas-kelas.svg",
       imageAlt: "Ulas Kelas",
       imageWidth: 240,
@@ -106,10 +112,12 @@ export default function OurProducts() {
   };
 
   return (
+    <>
     <div
       id="products"
       className="bg-[#3C317E] h-[800px] px-5 py-32 xl:px-16 xl:py-[156.5px] flex flex-col justify-center gap-10 md:gap-0 overflow-hidden md:h-[1200px] md:p-0 md:justify-between xl:h-[800px]"
     >
+
       <div className="absolute w-full h-[800px] md:h-[1200px] xl:h-[800px] left-0 flex justify-center items-center md:flex-col md:gap-80 xl:gap-40">
         <Image
           className="scale-110 md:hidden"
@@ -195,7 +203,9 @@ export default function OurProducts() {
         </div>
       </div>
 
+
       <div className="z-10 flex flex-col gap-10">
+
         <h1 className="font-bold text-white text-4xl w-[320px] mx-auto text-center md:text-6xl md:w-fit xl:hidden">
           Explore Our Products!
         </h1>
@@ -240,6 +250,8 @@ export default function OurProducts() {
                 <ProductCard
                   {...product}
                   key={index}
+                  modal={props.modal}
+                  modalApp={props.modalApp}
                 />
               );
             })}
@@ -308,6 +320,7 @@ export default function OurProducts() {
             </button>
           </div>
         </div>
+
       </div>
 
       <div
@@ -350,5 +363,6 @@ export default function OurProducts() {
         </div>
       </div>
     </div>
+    </>
   );
 }
