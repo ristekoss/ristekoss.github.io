@@ -1,0 +1,32 @@
+[
+  {
+    "category": "web",
+    "title": "SusunJadwal",
+    "description": "Universitas Indonesia's #1 student course planning app with over 500 thousand users across 14 faculties.",
+    "url": "https://susunjadwal.cs.ui.ac.id"
+  },
+  {
+    "category": "web",
+    "title": "RISTEK.Link",
+    "description": "The world's easiest totally-free customizable url shortener.",
+    "url": "https://ristek.link/"
+  },
+  {
+    "category": "dev",
+    "title": "SSO UI PHP",
+    "description": "The official PHP utility for Universitas Indonesia SSO authentication.",
+    "url": "https://github.com/RistekCSUI/SSO"
+  },
+  {
+    "category": "dev",
+    "title": "SSO UI Django",
+    "description": "The official Django Library for Universitas Indonesia SSO authentication.",
+    "url": "https://github.com/RistekCSUI/django-sso-ui"
+  },
+  {
+    "category": "web",
+    "title": "RISTEK Verify",
+    "description": "The official RISTEK digital certificate verification tool.",
+    "url": "https://verify.ristek.cs.ui.ac.id/"
+  }
+]
