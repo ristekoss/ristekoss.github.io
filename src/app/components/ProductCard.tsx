@@ -26,7 +26,7 @@ function ProductCard({
     <div className="w-[300px] h-fit rounded-[20px] p-5 bg-white text-sm xl:w-[360px]">
       <div className="card-content flex flex-col gap-[15px]">
         <div className="upper-content">
-          <div className="brand h-12 w-fit">
+          <div className="brand h-12 w-fit flex flex-row justify-center items-center">
             <Image
               src={imageSrc}
               alt={imageAlt}
