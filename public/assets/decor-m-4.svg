@@ -1,0 +1,17 @@
+<svg width="268" height="134" viewBox="0 0 268 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_489_5861)">
+<path d="M-1.7572e-05 134L134 1.7572e-05L134 134L-1.7572e-05 134Z" fill="#FFD668"/>
+<path d="M134 134L1.17147e-05 0L134 1.17147e-05L134 134Z" fill="#C424A3"/>
+</g>
+<g clip-path="url(#clip1_489_5861)">
+<circle cx="134" r="134" transform="rotate(-180 134 0)" fill="#64E6FB"/>
+</g>
+<defs>
+<clipPath id="clip0_489_5861">
+<rect width="134" height="134" fill="white" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 134 134)"/>
+</clipPath>
+<clipPath id="clip1_489_5861">
+<rect width="134" height="134" fill="white" transform="matrix(-1 0 0 -1 268 134)"/>
+</clipPath>
+</defs>
+</svg>
